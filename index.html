@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <!-- Main rows -->
+    <div class="container-fluid">
+        <!-- Row one -->
+        <div class="jumbotron">
+            <h3>Image SlideShow</h3>
+            <div class="row one">
+                <div class="col-md-6 one">
+                    <div class="input-slide">
+                        <div>
+                            <i class="fas fa-image"></i>
+                            <h5>Enter Time Interval in seconds</h5>
+                        </div>
+                        <div class="div">
+                            <input type="number" id="time" class="form-control">
+                            <br>
+                            <input type="submit" class="btn btn-outline-success" value="Start"
+                                onclick="startSlide(document.getElementById('time').value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 two">
+                    <div id="slider">
+                        <ul id="slides">
+                            <li class="slide showing"><img src="images/image1.jpg" alt=""></li>
+                            <li class="slide"><img src="images/image2.svg" alt=""></li>
+                            <li class="slide"><img src="images/image3.png" alt=""></li>
+                            <li class="slide"><img src="images/image4.jpg" alt=""></li>
+                            <li class="slide"><img src="images/image5.svg" alt=""></li>
+                            <li class="slide"><img src="images/image6.svg" alt=""></li>
+                            <li class="slide"><img src="images/image7.jpg" alt=""></li>
+                            <li class="slide"><img src="images/image8.jpg" alt=""></li>
+                            <li class="slide"><img src="images/image9.svg" alt=""></li>
+                            <li class="slide"><img src="images/image10.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row Two -->
+        <div class="jumbotron">
+            <h3>Calculator</h3>
+            <div class="row two">
+                <div class="col-md-6">
+                    <!-- Input -->
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Value1</h5>
+                            <input id="val1" type="number" class="input">
+                        </div>
+                    </div>
+                    <div class="input-div two">
+                        <div class="i">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Value2</h5>
+                            <input id="val2" type="number" class="input">
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <input type="number" class="btn btn-outline-info" value="0" id="ans" disabled>
+                    </div>
+                </div>
+                <div class="col-md-6 two">
+                    <!-- Options -->
+                    <div class="btn-group-vertical" data-toggle="buttons" id="options">
+                        <input type="button" value="Addition" class="btn btn-success" role="button"
+                            onclick="addition(document.getElementById('val1').value, document.getElementById('val2').value)"></input>
+                        <input type="button" value="Subtraction" class="btn btn-warning" role="button"
+                            onclick="subtraction(document.getElementById('val1').value, document.getElementById('val2').value)"></input>
+                        <input type="button" value="Multiplication" class="btn btn-danger" role="button"
+                            onclick="multiplication(document.getElementById('val1').value, document.getElementById('val2').value)"></input>
+                        <input type="button" value="Division" class="btn btn-info" role="button"
+                            onclick="division(document.getElementById('val1').value, document.getElementById('val2').value)"></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row Three -->
+        <div class="jumbotron">
+            <h3>Form Validation</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="#">
+                        <!-- Input -->
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Email</h5>
+                                <input id="email" type="email" class="input">
+                            </div>
+                        </div>
+                        <div>
+                            <p id="validate1" style="font-size: smaller; color: red;"></p>
+                        </div>
+                        <div class="input-div two">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="div">
+                                <h5>Password</h5>
+                                <input id="pass" type="password" class="input">
+                            </div>
+                        </div>
+                        <div>
+                            <p id="validate2" style="font-size: smaller; color: red;"></p>
+                        </div>
+                        <div>
+                            <input type="button" value="Validate" class="btn btn-danger"
+                                onclick="formValidate(document.getElementById('email').value, document.getElementById('pass').value)">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
