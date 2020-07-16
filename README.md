@@ -1,3 +1,3 @@
 #Web Development Training
 
-## [Assignment 1](github.com/sidjmishra/WebDev) 
+## [Assignment 1](WebDev/tree/master) 
