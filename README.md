@@ -1,3 +1,3 @@
 #Web Development Training
 
-## [Assignment 1](WebDev/tree/master) 
+## [Assignment 1](tree/master) 
