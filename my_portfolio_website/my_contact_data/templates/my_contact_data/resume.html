@@ -1,0 +1,17 @@
+{% extends 'my_contact_data/base.html' %}
+{% load static %}
+{% block stylesheets %}
+    {% endblock stylesheets %}
+
+    {% block headscript %}
+    {% endblock headscript %}
+
+{% block content %}
+<iframe src="{% static 'my_contact_data/Siddhant_resume.pdf' %}" width="100%" height="1000px">
+    This browser does not support PDFs. Please download the PDF to view it: Download PDF
+    </iframe>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}
